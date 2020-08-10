@@ -1,17 +1,22 @@
 <template>
   <div id="app">
-    <img alt="Vue logo" src="./assets/logo.png">
-    <HelloWorld msg="Welcome to Your Vue.js App"/>
+    <composante :msg="imgsrc"/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import Composante from './components/compt1.vue'
 
 export default {
   name: 'App',
   components: {
-    HelloWorld
+    Composante
+  },
+  data(){
+    return{
+      // ceci est un v-bind, on met me texte dans une variable
+      imgsrc:'https://picsum.photos/id/1/200/300'
+    }
   }
 }
 </script>
